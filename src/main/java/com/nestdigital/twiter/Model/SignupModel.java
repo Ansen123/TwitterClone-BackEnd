@@ -14,16 +14,19 @@ public class SignupModel {
     private String name;
     private String lName;
     private String mobile;
-    private String  userName;
+    private String userName;
+
+    private String pass;
     private String email;
     private String address;
 
-    public SignupModel(int id, String name, String lName, String mobile, String userName, String email, String address) {
+    public SignupModel(int id, String name, String lName, String mobile, String userName, String pass, String email, String address) {
         this.id = id;
         this.name = name;
         this.lName = lName;
         this.mobile = mobile;
         this.userName = userName;
+        this.pass = pass;
         this.email = email;
         this.address = address;
     }
@@ -49,6 +52,10 @@ public class SignupModel {
 
     public String getUserName() {
         return userName;
+    }
+
+    public String getPass() {
+        return pass;
     }
 
     public String getEmail() {
@@ -77,6 +84,10 @@ public class SignupModel {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public void setEmail(String email) {
