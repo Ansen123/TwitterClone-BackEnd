@@ -22,4 +22,9 @@ public class SignupController {
     public List<SignupModel>viewUser(){
         return (List<SignupModel>) dao.findAll();
     }
+    @CrossOrigin(origins = "*")
+    @PostMapping(path ="/login",consumes = "application/json",produces = "application/json")
+    public List<SignupModel>login(@RequestBody SignupModel signup ){
+        return (List<SignupModel>) dao.Signup(signup.getUserName(),signup.getPass());
+    }
 }
